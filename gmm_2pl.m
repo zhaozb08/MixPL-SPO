@@ -84,7 +84,7 @@ switch option
         emp = emp/n;
         tm = toc(tms);
         tos = tic;
-        [hat, fval] = fmincon(@(x) obj_gmm_t23(x, emp, eye(q)), t0, [], [], Aeq, beq, lb, ub);
+        [hat, fval] = fmincon(@(x) obj_gmm_t23(x, emp), t0, [], [], Aeq, beq, lb, ub);
         to = toc(tos);
     case 4 % top-2 and pairwise
         q1 = m*(m-1) - 1;
